@@ -1,0 +1,26 @@
+{
+  "name": "social",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnichols93/social.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jnichols93/social/issues"
+  },
+  "homepage": "https://github.com/jnichols93/social#readme",
+  "dependencies": {
+    "apollo-server": "^2.19.0",
+    "graphql": "^15.4.0",
+    "mongoose": "^5.11.3"
+  }
+}
