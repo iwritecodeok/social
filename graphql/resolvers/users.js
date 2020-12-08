@@ -46,11 +46,11 @@ module.exports = {
     async register(
       _,
       {
-      registerInput : {username, email, password, confirmPassword, firstname, lastname}
+      registerInput : {username, email, password, confirmPassword, firstName, lastName}
     }, 
       context, info){
       //Todo validate user data
-      const { valid, errors } = validateRegisterInput(username, email, password, confirmPassword, firstname, lastname)
+      const { valid, errors } = validateRegisterInput(username, email, password, confirmPassword, firstName, lastName)
       if(!valid){
         throw new UserInputError('Errors', { errors })
       }
@@ -70,8 +70,8 @@ module.exports = {
         email,
         username,
         password,
-        firstname,
-        lastname,
+        firstName, 
+        lastName,
         createdAt: new Date().toISOString()
       });
       const res = await newUser.save();
@@ -82,7 +82,8 @@ module.exports = {
         ...res._doc,
         id: res._id,
         token
-      }
-    }
+      };
+    },
+    
   }
 }
