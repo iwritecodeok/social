@@ -47,7 +47,6 @@ function MenuBar() {
             />
           </Menu.Menu>
         </Menu>
-     
     )
   }
 
