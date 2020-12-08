@@ -30,7 +30,7 @@ module.exports = {
          async createPost(_, { body }, context){
             const user = checkAuth(context);
 
-            if(argsToArgsConfig.body.trim() ===''){
+            if(body.trim() ===''){
                 throw new Error('Post body must not be empty');
             }
             const newPost = new Post({
@@ -42,7 +42,7 @@ module.exports = {
             const post = await newPost.save();
             context.pubsub.publish('NEW_POST',{
                 newPost: post
-            })
+            });
             return post;
          },
 
